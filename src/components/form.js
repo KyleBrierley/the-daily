@@ -5,7 +5,13 @@ import React from "react"
 // var pass = '8e0896fc823d3f61a408a91305ab446d';
 
 export default class FormPage extends React.Component {
-  state = {
+ 
+constructor() {
+    super();
+    this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+state = {
     phone: ""
   }
 
@@ -21,17 +27,19 @@ export default class FormPage extends React.Component {
   handleSubmit = event => {
     event.preventDefault()
     const data = new FormData(event.target);
+    console.log(data);
 
-    fetch("https://studio.twilio.com/v1/Flows/FWc07582ed3bca75ee1f1e12f963cd0056/Executions", {
-  "method": "POST",
-  "headers": {
-    "content-type": "application/x-www-form-urlencoded",
-    "authorization": "Basic QUMwODE0MjViZWUzYTA2ZWY5ZTU5NGEzZmMzZWE3NTQ3MDo4ZTA4OTZmYzgyM2QzZjYxYTQwOGE5MTMwNWFiNDQ2ZA=="
+    fetch("https://collect.tealiumiq.com/event", {
+    method: "POST",
+    headers: {
+    "Content-Type": "application/json"
   },
-  "body": {
-    "To": {phone},
-    "From": "+18608968586"
-  }
+  body: JSON.stringify({
+    "To": this.state.phone,
+    "From": "+18608968586",
+    "tealium_account": "services-kyle",
+    "tealium_profile": "main"
+  })
 })
 .then(response => {
   console.log(response);
@@ -39,7 +47,7 @@ export default class FormPage extends React.Component {
 .catch(err => {
   console.log(err);
 });
-
+    // utag.link({ "phone": data });
     alert(`Check your phone!`)
   }
 
