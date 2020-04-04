@@ -2,17 +2,16 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-// var options = { weekday: 'long'};
-// var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-// var day = days[ now.getDay() ];
-// year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false 
-var options = {  weekday: 'long' };
-var prnDt = 'Hey Quarantiner - Today is ' + new Date().toLocaleDateString('en-us', options);
+import CssBaseline from '@material-ui/core/CssBaseline'
+
+// var options = {  weekday: 'long' };
+// var prnDt = 'Hey Quarantiner - Today is ' + new Date().toLocaleDateString('en-us', options);
 
 const Header = ({ siteTitle }) => (
+  <CssBaseline />
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `linear-gradient(to right,  #663399, #5B72FF)`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -31,12 +30,13 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {prnDt}
-          {/* {siteTitle} */}
+          {/* {prnDt} */}
+          {siteTitle}
         </Link>
       </h1>
     </div>
   </header>
+  </ CssBaseline>
 )
 
 Header.propTypes = {
