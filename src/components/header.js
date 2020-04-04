@@ -36,8 +36,7 @@ const Header = ({ siteTitle }) => (
       </h1>
     </div>
   </header>
-  </ CssBaseline>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
