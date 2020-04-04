@@ -2,7 +2,7 @@
   "name": "BOTD",
   "private": true,
   "description": "It's the daily goodness bay-bee",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "author": "Kyle Brierley",
   "dependencies": {
     "@material-ui/core": "^4.9.8",
