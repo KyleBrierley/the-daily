@@ -8,7 +8,6 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 // var prnDt = 'Hey Quarantiner - Today is ' + new Date().toLocaleDateString('en-us', options);
 
 const Header = ({ siteTitle }) => (
-  <CssBaseline />
   <header
     style={{
       background: `linear-gradient(to right,  #663399, #5B72FF)`,
