@@ -2,8 +2,6 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import CssBaseline from '@material-ui/core/CssBaseline'
-
 // var options = {  weekday: 'long' };
 // var prnDt = 'Hey Quarantiner - Today is ' + new Date().toLocaleDateString('en-us', options);
 

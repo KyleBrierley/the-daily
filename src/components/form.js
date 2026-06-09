@@ -1,9 +1,5 @@
 import React from "react"
 
-// var url = 'https://studio.twilio.com/v1/Flows/FWc07582ed3bca75ee1f1e12f963cd0056/Executions';
-// var user = 'AC081425bee3a06ef9e594a3fc3ea75470';
-// var pass = '8e0896fc823d3f61a408a91305ab446d';
-
 export default class FormPage extends React.Component {
  
 constructor() {
